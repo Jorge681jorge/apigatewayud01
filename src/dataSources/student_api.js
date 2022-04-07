@@ -16,6 +16,21 @@ class StudentAPI extends RESTDataSource {
     async allStudents(){
         return await this.get(`/alumnos`)
     }
+
+
+    async createStudents(s){
+        s = new Object(JSON.parse(JSON.stringify(s)));
+        return await this.post('/alumnos/', s);
+    }
+
+    async deleteStudentByID(id){
+        return await this.delete(`/alumnos/${id}`);
+    }
+
+    /*async updateStudent(s){
+        s = new Object(JSON.parse(JSON.stringify(s)));
+        return await this.patch(`/alumnos/${s.id}`, s);
+    }*/
 }
 
 module.exports = StudentAPI;
