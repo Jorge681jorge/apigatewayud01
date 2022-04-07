@@ -14,3 +14,5 @@ class StudentAPI extends RESTDataSource {
     }
 
 }
+
+module.exports = StudentAPI;
