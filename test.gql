@@ -10,7 +10,7 @@ type Student{
 type Query{
 
     allStudents: [Student]
-    getStundentById(id: Int!): Student
+    getStudentById(id: Int!): Student
     getStudentsByCourse(course: Int!): [Student]
     getStundentByCod(cod: Int!): Student
     numberOfStudents(): Int
@@ -22,5 +22,5 @@ type Mutation{
 
     createStudents(name: String, cod: Int, course: Int, id: Int): Student
     deleteStudentByID(id: Int!): Student
-    
+
 }

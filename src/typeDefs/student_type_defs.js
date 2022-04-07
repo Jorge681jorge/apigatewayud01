@@ -1,6 +1,6 @@
-const {gql} = require('apollo-server');
+const { gql } = require('apollo-server');
 
-const studentTypeDef = gql`
+const studentTypeDefs = gql `
     
     type Student{
         name: String
@@ -11,12 +11,9 @@ const studentTypeDef = gql`
 
     type Query{
         allStudents: [Student]
-        getStundentById(id: Int!): Student
-        #getStudentsByCourse(course: Int!): [Student]
-        #getStundentByCod(cod: Int!): Student
-        numberOfStudents(): Int
+        getStudentById(id: Int!): Student
     }
-
+    
 `;
 
-module.exports = accountTypeDefs;
+module.exports = studentTypeDefs;

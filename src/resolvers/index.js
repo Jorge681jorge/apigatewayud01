@@ -1,6 +1,6 @@
-const studentResolvers = require('./student_resolvers');
+const studentResolver = require('./student_resolver');
 const lodash = require('lodash');
 
-const resolvers = lodash.merge(studentResolvers);
+const resolvers = lodash.merge(studentResolver);
 
 module.exports = resolvers;

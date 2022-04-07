@@ -8,7 +8,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     dataSources: () => ({
-        studentAPI: new StudentAPI() 
+        studentAPI: new StudentAPI()
     }),
     introspection: true,
     playground: true

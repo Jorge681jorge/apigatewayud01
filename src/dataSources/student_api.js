@@ -9,10 +9,13 @@ class StudentAPI extends RESTDataSource {
         this.baseURL = serverConfig.student_api_url;
     }
 
-    async getStundentById(id){
-        this.get(`/alumnos/${id}`);
+    async getStudentById(id){
+        return await this.get(`/alumnos/${id}`);
     }
 
+    async allStudents(){
+        return await this.get(`/alumnos`)
+    }
 }
 
 module.exports = StudentAPI;
